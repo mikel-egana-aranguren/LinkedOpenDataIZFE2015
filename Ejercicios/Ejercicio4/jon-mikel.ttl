@@ -1,0 +1,3 @@
+<urn:gip:eus:mikel> <urn:gip:eus:vive-en> <urn:gip:eus:donosti> .
+<urn:gip:eus:jon> <urn:gip:eus:vive-en> <urn:gip:eus:donosti> .
+<urn:gip:eus:jon> <urn:gip:eus:amigo-de> <urn:gip:eus:mikel> .

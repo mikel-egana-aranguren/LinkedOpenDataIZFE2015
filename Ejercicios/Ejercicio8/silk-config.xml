@@ -1,0 +1,51 @@
+<Silk>
+  <Prefixes>
+    <Prefix id="rdfs" namespace="http://www.w3.org/2000/01/rdf-schema#" />
+    <Prefix id="rdf" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+    <Prefix id="yago" namespace="http://dbpedia.org/class/yago/" />
+  </Prefixes>
+  <DataSources>
+    <DataSource id="dbpedia" type="sparqlEndpoint">
+      <Param name="endpointURI" value="http://dbpedia.org/sparql" />
+      <Param name="graph" value="http://dbpedia.org"/>
+    </DataSource>
+    <DataSource id="local" type="sparqlEndpoint">
+      <Param name="endpointURI" value="http://localhost:9999/bigdata/sparql" />
+    </DataSource>
+  </DataSources>
+  <Interlinks>
+    <Interlink id="towns">
+      <LinkType>owl:sameAs</LinkType>
+      <SourceDataset dataSource="dbpedia" var="a">
+        <RestrictTo>
+          ?a rdf:type yago:MunicipalitiesInGipuzkoa
+        </RestrictTo>
+      </SourceDataset>
+      <TargetDataset dataSource="local" var="b">
+        <RestrictTo>
+          ?b rdf:type yago:MunicipalitiesInGipuzkoa
+        </RestrictTo>
+      </TargetDataset>
+      <LinkageRule>
+        <Compare metric="levenshteinDistance" threshold="2.0" required="true">
+          <TransformInput function="lowerCase">
+            <Input path="?a/rdfs:label"/>
+          </TransformInput>
+          <TransformInput function="lowerCase">
+            <Input path="?b/rdfs:label"/>
+          </TransformInput>
+      </Compare>
+      </LinkageRule>
+      <Outputs>
+        <Output type="file" minConfidence="0.95">
+          <Param name="file" value="accepted_links.nt" />
+          <Param name="format" value="ntriples" />
+        </Output>
+        <Output type="file" maxConfidence="0.95">
+          <Param name="file" value="verify_links.nt" />
+          <Param name="format" value="alignment" />
+        </Output>
+      </Outputs>
+    </Interlink>
+  </Interlinks>
+</Silk>
