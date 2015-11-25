@@ -1,0 +1,163 @@
+[
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://gipuzkoa.eus/",
+      "prefixes": [
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "xsd",
+          "uri": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"resource/\" + value.urlify()",
+          "isRowNumberCell": false,
+          "columnName": "Museoa",
+          "rdfTypes": [
+            {
+              "uri": "http://dbpedia.org/ontology/museum",
+              "curie": "http://dbpedia.org/ontology/museum"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "lang": "eu",
+                "columnName": "Museoa"
+              }
+            },
+            {
+              "uri": "prop/kokalekua",
+              "curie": ":prop/kokalekua",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"resource/\" + value.urlify().toLowercase()",
+                "isRowNumberCell": false,
+                "columnName": "Kokalekua",
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "curie": "rdfs:label",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "columnName": "Kokalekua"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/elements/1.1/subject",
+              "curie": "http://purl.org/dc/elements/1.1/subject",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"resource/\" + value.urlify()",
+                "isRowNumberCell": false,
+                "columnName": "Arloa",
+                "rdfTypes": [],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://dbpedia.org/ontology/openingDate",
+              "curie": "http://dbpedia.org/ontology/openingDate",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#date",
+                "columnName": "Irekitze data"
+              }
+            },
+            {
+              "uri": "prop/kopurua",
+              "curie": ":prop/kopurua",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Item kop"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "\"resource/\" + value.urlify()",
+          "isRowNumberCell": false,
+          "columnName": "Langilea",
+          "rdfTypes": [
+            {
+              "uri": "http://xmlns.com/foaf/0.1/person",
+              "curie": "foaf:person"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://vocab.data.gov/def/drm#worksFor",
+              "curie": "http://vocab.data.gov/def/drm#worksFor",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"resource/\" + value.urlify()",
+                "isRowNumberCell": false,
+                "columnName": "Museoa",
+                "rdfTypes": [],
+                "links": []
+              }
+            },
+            {
+              "uri": "prop/bizilekua",
+              "curie": ":prop/bizilekua",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "\"resource/\" + value.urlify().toLowercase()",
+                "isRowNumberCell": false,
+                "columnName": "Langile bizilekua",
+                "rdfTypes": [],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://xmlns.com/foaf/0.1/name",
+              "curie": "foaf:name",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "Langilea"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

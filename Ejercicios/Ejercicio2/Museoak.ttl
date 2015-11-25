@@ -1,0 +1,101 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+<http://gipuzkoa.eus/resource/jm-barandiaran> a <http://dbpedia.org/ontology/museum> ;
+	rdfs:label "JM Barandiaran"@eu .
+
+<http://gipuzkoa.eus/resource/ataun> rdfs:label "Ataun" .
+
+<http://gipuzkoa.eus/resource/jm-barandiaran> <http://gipuzkoa.eus/prop/kokalekua> <http://gipuzkoa.eus/resource/ataun> ;
+	<http://purl.org/dc/elements/1.1/subject> <http://gipuzkoa.eus/resource/jose-miguel-barandiaran> ;
+	<http://dbpedia.org/ontology/openingDate> "07/07/2015"^^xsd:date ;
+	<http://gipuzkoa.eus/prop/kopurua> "457"^^xsd:int .
+
+<http://gipuzkoa.eus/resource/mikel-aranguren> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/jm-barandiaran> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/bilbo> ;
+	foaf:name "Mikel Aranguren" .
+
+<http://gipuzkoa.eus/resource/leire-bardaji> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/jm-barandiaran> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/ataun> ;
+	foaf:name "Leire Bardaji" .
+
+<http://gipuzkoa.eus/resource/jon-alfaro> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/jm-barandiaran> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/donostia> ;
+	foaf:name "Jon Alfaro" .
+
+<http://gipuzkoa.eus/resource/san-telmo> a <http://dbpedia.org/ontology/museum> ;
+	rdfs:label "San Telmo"@eu .
+
+<http://gipuzkoa.eus/resource/donostia> rdfs:label "Donostia" .
+
+<http://gipuzkoa.eus/resource/san-telmo> <http://gipuzkoa.eus/prop/kokalekua> <http://gipuzkoa.eus/resource/donostia> ;
+	<http://purl.org/dc/elements/1.1/subject> <http://gipuzkoa.eus/resource/kultura> ;
+	<http://dbpedia.org/ontology/openingDate> "24/10/2011"^^xsd:date ;
+	<http://gipuzkoa.eus/prop/kopurua> "1256"^^xsd:int .
+
+<http://gipuzkoa.eus/resource/mikel-aranguren> <http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/san-telmo> .
+
+<http://gipuzkoa.eus/resource/aitor-labajo> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/san-telmo> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/eibar> ;
+	foaf:name "Aitor Labajo" .
+
+<http://gipuzkoa.eus/resource/gugenheim> a <http://dbpedia.org/ontology/museum> ;
+	rdfs:label "Gugenheim"@eu .
+
+<http://gipuzkoa.eus/resource/bilbo> rdfs:label "Bilbo" .
+
+<http://gipuzkoa.eus/resource/gugenheim> <http://gipuzkoa.eus/prop/kokalekua> <http://gipuzkoa.eus/resource/bilbo> ;
+	<http://purl.org/dc/elements/1.1/subject> <http://gipuzkoa.eus/resource/artea> ;
+	<http://dbpedia.org/ontology/openingDate> "25/11/1991"^^xsd:date ;
+	<http://gipuzkoa.eus/prop/kopurua> "36"^^xsd:int .
+
+<http://gipuzkoa.eus/resource/mikel-aranguren> <http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> .
+
+<http://gipuzkoa.eus/resource/aitor-labajo> <http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> .
+
+<http://gipuzkoa.eus/resource/miren-aranguren> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/bilbo> ;
+	foaf:name "Miren Aranguren" .
+
+<http://gipuzkoa.eus/resource/eneko-aranguren> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/bilbo> ;
+	foaf:name "Eneko Aranguren" .
+
+<http://gipuzkoa.eus/resource/michael-bush> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/boston> ;
+	foaf:name "Michael Bush" .
+
+<http://gipuzkoa.eus/resource/soledad-barroso> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/paris> ;
+	foaf:name "Soledad Barroso" .
+
+<http://gipuzkoa.eus/resource/juan-goytisolo> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> ;
+	foaf:name "Juan Goytisolo" .
+
+<http://gipuzkoa.eus/resource/maialen-albizuri> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/durango> ;
+	foaf:name "Maialen Albizuri" .
+
+<http://gipuzkoa.eus/resource/iratxe-gandiaga> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/eibar> ;
+	foaf:name "Iratxe Gandiaga" .
+
+<http://gipuzkoa.eus/resource/mark-wilkinson> a foaf:person ;
+	<http://vocab.data.gov/def/drm#worksFor> <http://gipuzkoa.eus/resource/gugenheim> ;
+	<http://gipuzkoa.eus/prop/bizilekua> <http://gipuzkoa.eus/resource/otawa> ;
+	foaf:name "Mark Wilkinson" .
