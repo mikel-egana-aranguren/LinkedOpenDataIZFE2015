@@ -1,0 +1,5 @@
+SELECT ?s
+WHERE {
+ ?s <urn:gip:eus:vive-en> ?o .
+ ?s <urn:gip:eus:amigo-de> ?x 
+}
