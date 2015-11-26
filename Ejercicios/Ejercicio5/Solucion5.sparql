@@ -1,0 +1,9 @@
+PREFIX gip_prop: <http://gipuzkoa.eus/prop/>
+
+SELECT DISTINCT ?museoa
+
+WHERE {
+    ?langile foaf:name ?izena .
+    ?museoa gip_prop:kopurua ?langile_kop .
+    FILTER ((regex(?izena,'Mi.*')) && (?langile_kop > "800"^^xsd:int))
+}
