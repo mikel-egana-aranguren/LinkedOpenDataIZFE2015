@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Linked Data</title>
+</head>
+<body>
+<h1>Linked Data</h1>
+<h3>Main path</h3>
+<p>/home/lod/LinkedDataServer</p>
+
+<h3>Software</h3>
+<p>
+<table border="border">
+<tr>
+<td><strong>Tool</strong></td>
+<td><strong>URL</strong></td>
+<td><strong>Command</strong></td>
+<td><strong>Path</strong></td>
+</tr>
+<tr>
+<td><a href="https://www.blazegraph.com/">Blazegraph</a> (Triple Store)</td>
+<td><a href="http://localhost:9999" name="http://localhost:9999">http://localhost:9999</a></td>
+<td>java -server -jar bigdata-bundled.jar</td>
+<td>/blazegraph</td>
+</tr>
+<tr>
+<td><a href="http://wifo5-03.informatik.uni-mannheim.de/pubby/">Pubby</a>  (Linked Data: URIs/conneg)</td>
+<td><a href="http://localhost:8080" name="http://localhost:8080">http://localhost:8080</a></td>
+<td>java -jar start.jar jetty.port=8080</td>
+<td>/jetty</td>
+</tr>
+<tr>
+<td><a href="http://refine.deri.ie/">Google Refine + RDF extension</a>  (CSV to RDF)</td>
+<td><a href="http://localhost:3333" name="http://localhost:3333">http://localhost:3333</a></td>
+<td>./refine</td>
+<td>/refine</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/RDF/Validator/">W3C RDF validator</a> </td>
+<td><a href="http://localhost:8081" name="http://localhost:8081">http://localhost:8081</a></td>
+<td>java -jar target/scala-2.11/rdf-validator.jar 8081</td>
+<td>/rdfvalidator-ng</td>
+</tr>
+<tr>
+<td><a href="http://silk-framework.com/">Silk</a> (Link discovery)</td>
+<td>-</td>
+<td>java -DconfigFile=silk-config.xml -jar silk.jar</td>
+<td>/silk</td>
+</tr>
+<tr>
+<td><a href="http://protege.stanford.edu/">Protege</a> (Ontology edition)</td>
+<td>-</td>
+<td>./run.sh</td>
+<td>/protege</td>
+</tr>
+<tr>
+<td><a href="http://www.easyrdf.org/converter">Easy RDF</a> (RDF Syntax converter)</td>
+<td><a href="http://www.easyrdf.org/converter">http://www.easyrdf.org/converter</a></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="http://rdf-translator.appspot.com/">RDF translator</a> (RDF Syntax converter)</td>
+<td><a href="http://rdf-translator.appspot.com/">http://rdf-translator.appspot.com/</a></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</table>
+<h3>Slides</h3>
+<p><a href="http://slides.com/mikel-egana-aranguren/linked-open-data#/">http://slides.com/mikel-egana-aranguren/linked-open-data#/</a></p>
+<h3>Soluciones</h3>
+<p><a href="https://github.com/mikel-egana-aranguren/LinkedOpenDataIZFE2015">http://github.com/mikel-egana-aranguren/LinkedOpenDataIZFE2015</a></p>
+
+
+
+
+
+</body>
+</html>
+</p>

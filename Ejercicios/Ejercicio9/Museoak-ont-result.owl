@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY prop "http://gipuzkoa.eus/prop/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://gipuzkoa.eus/admin_ontology.owl#"
+     xml:base="http://gipuzkoa.eus/admin_ontology.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:prop="http://gipuzkoa.eus/prop/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://gipuzkoa.eus/admin_ontology.owl">
+        <owl:imports rdf:resource="file:/C:/Users/megana/EuroHelp/Formacion_IZFE/Contenido/Ejercicios/Ejercicio9/Museoak-rdf-owl.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gipuzkoa.eus/prop/bizilekua -->
+
+    <rdf:Description rdf:about="&prop;bizilekua">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vocab.data.gov/def/drm#worksFor"/>
+            <rdf:Description rdf:about="&prop;kokalekua"/>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
+    
+
+
+    <!-- http://gipuzkoa.eus/prop/kokalekua -->
+
+    <rdf:Description rdf:about="&prop;kokalekua">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gipuzkoa.eus/ont/BilbotarLangilea -->
+
+    <owl:Class rdf:about="http://gipuzkoa.eus/ont/BilbotarLangilea">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://vocab.data.gov/def/drm#worksFor"/>
+                        <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/museum"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&prop;bizilekua"/>
+                        <owl:hasValue rdf:resource="http://gipuzkoa.eus/resource/bilbo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://gipuzkoa.eus/ont/euskalmuseum -->
+
+    <owl:Class rdf:about="http://gipuzkoa.eus/ont/euskalmuseum">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&prop;kokalekua"/>
+                <owl:hasValue rdf:resource="http://gipuzkoa.eus/ont/euskadi"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/museum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://gipuzkoa.eus/ont/langilea -->
+
+    <owl:Class rdf:about="http://gipuzkoa.eus/ont/langilea">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.data.gov/def/drm#worksFor"/>
+                <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/museum"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://gipuzkoa.eus/ont/langilea2 -->
+
+    <owl:Class rdf:about="http://gipuzkoa.eus/ont/langilea2">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.data.gov/def/drm#worksFor"/>
+                <owl:onClass rdf:resource="http://dbpedia.org/ontology/museum"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gipuzkoa.eus/ont/euskadi -->
+
+    <owl:NamedIndividual rdf:about="http://gipuzkoa.eus/ont/euskadi"/>
+    
+
+
+    <!-- http://gipuzkoa.eus/resource/bilbo -->
+
+    <rdf:Description rdf:about="http://gipuzkoa.eus/resource/bilbo">
+        <prop:kokalekua rdf:resource="http://gipuzkoa.eus/ont/euskadi"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://gipuzkoa.eus/resource/gugenheim"/>
+            <rdf:Description rdf:about="http://gipuzkoa.eus/resource/jm-barandiaran"/>
+            <rdf:Description rdf:about="http://gipuzkoa.eus/resource/san-telmo"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

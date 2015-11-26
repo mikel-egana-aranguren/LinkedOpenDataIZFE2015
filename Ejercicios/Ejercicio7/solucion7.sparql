@@ -1,0 +1,13 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbpedia_ont: <http://dbpedia.org/ontology/>
+PREFIX gip: <http://gipuzkoa.eus/resource/>
+PREFIX gip_prop: <http://gipuzkoa.eus/prop/>
+
+SELECT ?alkate
+WHERE {
+ gip:gugenheim gip_prop:kokalekua ?hiria . 
+ ?hiria owl:sameAs ?town
+ SERVICE <http://dbpedia.org/sparql> {
+  ?town dbpedia_ont:leaderName ?alkate
+ }
+}
