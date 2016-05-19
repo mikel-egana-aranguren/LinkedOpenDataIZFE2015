@@ -1,9 +1,11 @@
 PREFIX gip_prop: <http://gipuzkoa.eus/prop/>
+PREFIX drm: <http://vocab.data.gov/def/drm#>
 
 SELECT DISTINCT ?museoa
 
 WHERE {
     ?langile foaf:name ?izena .
+    ?langile drm:worksFor ?museoa
     ?museoa gip_prop:kopurua ?langile_kop .
     FILTER ((regex(?izena,'Mi.*')) && (?langile_kop > "800"^^xsd:int))
 }
